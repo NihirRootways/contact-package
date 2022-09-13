@@ -45,7 +45,7 @@
 					<textarea placeholder="I have an idea for a project...." name="message" id="message" required title="Insert your query or project idea"></textarea>
 					<label for="message">Email Message</label>
 				</div>
-				<input type="submit" value="Send Email">
+				<button type="submit">Send Email</button>
 			</form>
 		</div>
 	</div>
