@@ -31,4 +31,14 @@ return [
 - Update your mail configuration in ```.env``` file.
 - And Done.
 
-<hr style="border-width:1000px;">
+## For customize the blade file
+
+- You have to find the nihir/contact folder in ```vendor``` folder.
+- In this folder there is ```src``` folder and ```view\contact.blade.php``` .
+- This blade is using bootstrap.
+
+## For customizing the email mark-down
+
+- You have to find the nihir/contact folder in ```vendor``` folder.
+- In this folder there is ```src``` folder and ```view\contact\email.blade.php``` .
+- Enjoy code.
