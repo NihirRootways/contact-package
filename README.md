@@ -11,10 +11,13 @@ composer require nihir/contact
 - After this you have to publish providers in ```\config\app.php``` File.
 - Put this ```Nihir\Contact\ContactServiceProvider::class,``` in providers section.
 - After this publish the vendor using ```php artisan vendor:publish``` .
-- After this clear cache and routes
+- After this clear cache and routes:
 
 ```
 php artisan optimize:clear
+```
+
+```
 php artisan route:cache
 ```
 - For set recipient's email you have to set email in ```\config\contact.php``` in this code part like this.
