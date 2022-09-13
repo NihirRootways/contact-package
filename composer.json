@@ -13,7 +13,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Nihir\\contact\\": "src/"
+            "Nihir\\Contact\\": "vendor/nihir/contact/src/"
         }
-    }   
+    }
 }
