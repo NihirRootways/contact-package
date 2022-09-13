@@ -15,12 +15,5 @@
         "psr-4": {
             "Nihir\\contact\\": "src/"
         }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Nihir\\Contact\\ContactServiceProvider"
-            ]
-        }
     }
 }
