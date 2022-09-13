@@ -25,16 +25,25 @@
         <form action="{{ route('contact') }}" method="POST">
             @csrf
             <div class="mb-3">
-              <label for="" class="form-label">Name</label>
-              <input type="text" name="name" id="" class="form-control" placeholder="Your name please" aria-describedby="helpId">
+              <label for="form-name" class="form-label">Name</label>
+              <input type="text" name="name" id="form-name" class="form-control" placeholder="Your name please" aria-describedby="helpId">
+            @error('name')
+                <span class="text-danger">{{ $message }}</span>
+            @enderror
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Email</label>
-                <input type="email" name="email" id="" class="form-control" placeholder="Your valid email please" aria-describedby="helpId">
+                <label for="form-email" class="form-label">Email</label>
+                <input type="email" name="email" id="form-email" class="form-control" placeholder="Your valid email please" aria-describedby="helpId">
+            @error('email')
+                <span class="text-danger">{{ $message }}</span>
+            @enderror
             </div>
             <div class="mb-3">
-              <label for="" class="form-label">Message</label>
-              <textarea class="form-control" name="message" id="" rows="3" placeholder="Your query"></textarea>
+              <label for="form-message" class="form-label">Message</label>
+              <textarea class="form-control" name="message" id="form-message" rows="3" placeholder="Your message"></textarea>
+            @error('nessage')
+                <span class="text-danger">{{ $message }}</span>
+            @enderror
             </div>
             <input type="submit" value="Submit" class="btn btn-sm btn-primary">
         </form>

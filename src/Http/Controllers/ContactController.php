@@ -14,6 +14,11 @@ class ContactController extends Controller
         return view('contact::contact');
     }
     public function send(Request $request){
+        $this->validate($request,[
+            'name'=>'required',
+            'email'=>'required|email',
+            'query'=>'required',
+        ]);
         Mail::to(config('contact.send_email_to'))->send(new ContactMailable($request->message,$request->name));
         // Mail::to(env('MAIL_TO'))->send(new ContactMailable($request->message,$request->name));
         Contact::create([
