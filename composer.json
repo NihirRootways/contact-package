@@ -1,0 +1,19 @@
+{
+    "name": "nihir/contact",
+    "description": "This will send an email from contact from",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nihir",
+            "email": "nihir@rootways.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Nihir\\contact\\": "src/"
+        }
+    }
+}
