@@ -43,14 +43,23 @@
 					<input type="text" placeholder="Jhon Doe" name="name" id="name" {{-- required --}} title="Enter your name."/>
 					<label for="name">Full Name</label>
 				</div>
+                @error('name')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
 				<div class="flex-rev">
 					<input type="email" placeholder="jhon@doe.com" name="email" id="email" {{-- required --}} title="Enter your valid email address."/>
 					<label for="email">Your Email</label>
 				</div>
+                @error('email')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
 				<div class="flex-rev">
 					<textarea placeholder="I have an idea for a project...." name="message" id="message" {{-- required --}} title="Insert your query or project idea"></textarea>
 					<label for="message">Email Message</label>
 				</div>
+                @error('message')
+                    <span class="text-danger">{{ $message }}</span>
+                @enderror
 				<button type="submit">Send Email</button>
 			</form>
 		</div>
