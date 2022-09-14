@@ -42,16 +42,6 @@
 				<div class="flex-rev">
 					<input type="text" placeholder="Jhon Doe" name="name" id="name" {{-- required --}} title="Enter your name."/>
 					<label for="name">Full Name</label>
-{{--                     @if (count($errors) > 0)
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
- --}}
 				</div>
 				<div class="flex-rev">
 					<input type="email" placeholder="jhon@doe.com" name="email" id="email" {{-- required --}} title="Enter your valid email address."/>
