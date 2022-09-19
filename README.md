@@ -51,20 +51,20 @@ return [
 - This will be store in database, If you want to disabled this than go on  ```src``` folde and find the ```Http\Controllers\ContactController.php``` and in this file you have to find the create methos you just have to remove it and your function is looks like this.
 
 ```php
-    public function send(Request $request){
-        Mail::to(config('contact.send_email_to'))->send(new ContactMailable($request->message,$request->name));
-        // Mail::to(env('MAIL_TO'))->send(new ContactMailable($request->message,$request->name));
-        return redirect()->route('contact.index')->with('success','Mail sent successfully');
-    }
+public function send(Request $request){
+    Mail::to(config('contact.send_email_to'))->send(new ContactMailable($request->message,$request->name));
+    // Mail::to(env('MAIL_TO'))->send(new ContactMailable($request->message,$request->name));
+    return redirect()->route('contact.index')->with('success','Mail sent successfully');
+}
 ```
 - removable part:
 
 ```php
-   Contact::create([
-        'name'=>$request->name,
-        'email'=>$request->email,
-        'message'=>$request->message,
-    ]);
+Contact::create([
+    'name'=>$request->name,
+    'email'=>$request->email,
+    'message'=>$request->message,
+]);
 ```
 ## Updating
 
