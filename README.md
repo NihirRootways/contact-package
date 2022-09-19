@@ -22,11 +22,12 @@ php artisan route:cache
 ```
 - For set recipient's email you have to set email in ```\config\contact.php``` in this code part like this.
 
-```
+```php
 <?php
 
 return [
     'send_email_to' => "your@email.com"
+
 ];
 ```
 
@@ -52,7 +53,7 @@ return [
 - You have to migrate the database in your project using ```php artisan migrate``` command.
 - This will be store in database, If you want to disabled this than go on  ```src``` folde and find the ```Http\Controllers\ContactController.php``` and in this file you have to find the create methos you just have to remove it and your function is looks like this.
 
-```
+```php
     public function send(Request $request){
         Mail::to(config('contact.send_email_to'))->send(new ContactMailable($request->message,$request->name));
         // Mail::to(env('MAIL_TO'))->send(new ContactMailable($request->message,$request->name));
@@ -61,10 +62,31 @@ return [
 ```
 - removable part:
 
-```
+```php
    Contact::create([
         'name'=>$request->name,
         'email'=>$request->email,
         'message'=>$request->message,
     ]);
 ```
+## Updating
+
+- Here I update the some code for customizing like you can replace your social links.
+- Where you can find this or how can you edit this?
+- ```config\contact.php``` in this path you can find this code where you have to replace your code.
+
+```php
+
+return [
+
+    'send_email_to' => "nihirzala@gmail.com",
+    'instagram'=>"http://www.instagram.com",    // replace with your instagram profile url
+    'twitter'=>"http://www.twitter.com",    // replace with your twitter profile url
+    'facebook'=>"http://www.facebook.com",  // replace with your facebook profile url
+    'linkedin'=>"http://www.linkedin.com",  // replace with your linkedin profile url
+    'mail'=>"nihir@zala.com",
+
+];
+```
+
+
