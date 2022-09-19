@@ -78,7 +78,7 @@ return [
     'twitter'=>"http://www.twitter.com",    // replace with your twitter profile url
     'facebook'=>"http://www.facebook.com",  // replace with your facebook profile url
     'linkedin'=>"http://www.linkedin.com",  // replace with your linkedin profile url
-    'mail'=>"nihir@zala.com",
+    'mail'=>"nihirzala@gmail.com",
 ];
 ```
 
