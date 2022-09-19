@@ -23,8 +23,6 @@ php artisan route:cache
 - For set recipient's email you have to set email in ```\config\contact.php``` in this code part like this.
 
 ```php
-<?php
-
 return [
     'send_email_to' => "your@email.com"
 
