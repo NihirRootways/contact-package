@@ -53,7 +53,6 @@ return [
 ```php
 public function send(Request $request){
     Mail::to(config('contact.send_email_to'))->send(new ContactMailable($request->message,$request->name));
-    // Mail::to(env('MAIL_TO'))->send(new ContactMailable($request->message,$request->name));
     return redirect()->route('contact.index')->with('success','Mail sent successfully');
 }
 ```
