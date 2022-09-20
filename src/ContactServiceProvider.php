@@ -13,7 +13,12 @@ class ContactServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/config/contact.php','contact'
         );
-        $this->publishes([
+        /* $this->publishes([
+            __DIR__.'/config/contact.php' => config_path('contact.php'),
+            __DIR__.'/view/contact.blade.php',
+            __DIR__.'/view/contact/email.blade.php',
+        ]); */
+        $this->publishableGroups([
             __DIR__.'/config/contact.php' => config_path('contact.php'),
             __DIR__.'/view/contact.blade.php',
             __DIR__.'/view/contact/email.blade.php',

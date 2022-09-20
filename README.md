@@ -8,10 +8,11 @@
 composer require nihir/contact
 ```
 
-- After this you have to publish providers in ```\config\app.php``` File.
-- Put this ```Nihir\Contact\ContactServiceProvider::class,``` in providers section.
-- After this publish the vendor using ```php artisan vendor:publish``` .
-- After this clear cache and routes:
+- For check the contact package is suc installed or not your have to run this command ```composer dump-autoload```, If you did not get any error that means the package is successfully installed.
+- After this clear cache : ```php artisan optimize:clear```.
+## For Publishing
+
+- For Publishing the routs and blade file you have to run this command ```php artisan vendor:publish``` , And in the list you can find the ```nihir/contact``` publisher select that number.
 
 ```
 php artisan optimize:clear
@@ -20,7 +21,7 @@ php artisan optimize:clear
 ```
 php artisan route:cache
 ```
-- For set recipient's email you have to set email in ```\config\contact.php``` in this code part like this.
+- For set recipient's email you have to set email in ```\config\contact.php``` in this code part like this, And for get the ```contact.php``` file you have to publish the files.
 
 ```php
 return [
