@@ -66,7 +66,7 @@ Contact::create([
 ]);
 ```
 
-- If you want to store the data in database then just simply put code before calling ```Mail``` .
+- If you want to store the data in database then just simply put code before calling ```Mail``` in controller.
 ## Updating
 
 - Here I update the some code for customizing like you can replace your social links.
